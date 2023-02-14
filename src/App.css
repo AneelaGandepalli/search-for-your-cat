@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+  padding: 30px; }
+
+.MoviesSearch {
+  margin-bottom: 20px; }
+
+.MovieCard {
+  position: relative; }
+  .MovieCard:hover .MovieCardImage {
+    filter: brightness(30%);
+    transition: all .3s ease; }
+  .MovieCard:hover .MovieCardTitle {
+    opacity: 1;
+    transition: all .3s ease; }
+  .MovieCard:hover .MovieCardRating {
+    opacity: 1;
+    transition: all .3s ease; }
+  .MovieCard:hover .MovieCardFavorite {
+    opacity: 1;
+    transition: all .3s ease; }
+  .MovieCardTitle {
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .MovieCardImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .MovieCardRating {
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    bottom: 10%;
+    transform: translate(0, -50%); }
+  .MovieCardFavorite {
+    opacity: 0;
+    z-index: 1;
+    position: absolute !important;
+    top: 10%;
+    right: 5%; }
+    .MovieCardFavorite svg {
+      color: red; }

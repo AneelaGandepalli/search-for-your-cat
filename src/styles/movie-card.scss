@@ -1,0 +1,61 @@
+.MovieCard {
+    position:  relative;
+    
+
+    &:hover {
+        .MovieCardImage {
+            filter: brightness(30%);
+            transition: all .3s ease;
+        }
+        .MovieCardTitle {
+            opacity: 1;
+            transition: all .3s ease;
+        }
+        .MovieCardRating {
+            opacity: 1;
+            transition: all .3s ease;
+        }
+        .MovieCardFavorite {
+            opacity: 1;
+            transition: all .3s ease;
+        }
+    }
+
+    &Title {
+        z-index: 1;
+        opacity: 0;
+        position: absolute;
+        color: white;
+        font-size: 14px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  
+    }
+
+    &Image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        
+    }
+
+    &Rating {
+        opacity: 0;
+        z-index: 1;
+        position: absolute;
+        bottom: 10%;
+        transform: translate(0, -50%);
+    }
+
+    &Favorite {
+        opacity: 0;
+        z-index: 1;
+        position: absolute !important;
+        top:10%;
+        right: 5%;
+
+        svg {
+            color: red;
+        }
+    }
+}
